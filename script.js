@@ -35,3 +35,22 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     message.style.color = "green";
     message.innerText = "Login successful!";
 });
+localStorage.setItem("username", username);
+let user = localStorage.getItem("username");
+if (user) {
+    document.getElementById("welcome").innerText = "Welcome " + user;
+}
+
+function logout() {
+    localStorage.clear();
+    window.location.href = "login.html";
+}
+document.getElementById("showPassword").addEventListener("change", function() {
+    let passwordField = document.getElementById("password");
+
+    if (this.checked) {
+        passwordField.type = "text";
+    } else {
+        passwordField.type = "password";
+    }
+});

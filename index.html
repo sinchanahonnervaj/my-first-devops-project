@@ -7,7 +7,6 @@
     <body>
         <h1>Hello! My name is Sinchana</h1>
         <p>This is a simple HTML page for demonstration purposes.</p>
-        <p>I would like to add a simple login form.</p>
         <form action="/submit" method="post">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username"><br><br>
@@ -15,11 +14,21 @@
             <input type="email" id="email" name="email"><br><br>
             <label for="password">Password:</label>
             <input type="password" id="password" name="password"><br><br>
+            <input type="checkbox" id="showPassword"> Show Password<br><br>
             <input type="submit" value="Login">
         </form>
+        <div class="container">
+        <h2 id="welcome"></h2>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+        <nav>
+    <a href="index.html">Home</a>
+    <a href="login.html">Login</a>
+    <a href="about.html">About</a>
+</nav>
 <p id="message"></p>
 
 <!-- Link JS file -->
-<script src="script.js"></script>
+    <script src="script.js"></script>
     </body>
 </html>
