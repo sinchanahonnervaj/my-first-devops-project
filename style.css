@@ -72,7 +72,10 @@ input[type="submit"] {
 
 /* Hover effect */
 input[type="submit"]:hover {
-    background: #45a049;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color:#7a096b;
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.2);
 }
 input[type="email"] {
     width: 100%;
@@ -84,10 +87,15 @@ input[type="email"] {
     box-sizing: border-box;
 }
 nav {
-    background: #333;
-    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    text-align: right;
+    z-index: 1000;
 }
 
 nav a {
@@ -98,7 +106,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #74ebd5;
+    color: #7a096b;
 }
 form {
     transition: 0.3s;
@@ -111,18 +119,19 @@ form:hover {
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     color: white;
-    border: transparent;
+    border: none;
     border-radius: 30px;
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
     box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+
+    width: 200px;
+    max-width: 250px;
+    padding: 12px;
+
     display: block;
-    margin: 20px auto;
-    width: 100%;
-    max-width: 350px;
-    padding: 16px;
-    margin-top: 20px;
+    margin: 15px auto; 
 }
 
 .logout-btn:hover {
